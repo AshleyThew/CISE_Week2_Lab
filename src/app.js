@@ -1,13 +1,11 @@
 const dayOfTheWeek = (date = new Date()) => {
-    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    return days[date.getDay()];
-}
-
+  const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  return days[date.getDay()];
+};
 
 try {
-    document.getElementById('day').innerText = dayOfTheWeek();
-} catch(err) {}
+  document.getElementById('day').innerText = dayOfTheWeek();
+// eslint-disable-next-line no-empty
+} catch (err) {}
 
-
-const _dayOfTheWeek = dayOfTheWeek;
-export { _dayOfTheWeek as dayOfTheWeek };
+exports.dayOfTheWeek = dayOfTheWeek;

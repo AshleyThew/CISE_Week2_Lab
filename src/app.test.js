@@ -1,6 +1,6 @@
-import { dayOfTheWeek } from './app.js';
+import { dayOfTheWeek } from './app';
 
 it('getDay returns the long-format day of the week', () => {
-    const day = dayOfTheWeek( new Date('3/11/2020') );
-    expect( day ).toBe('Wednesday');
+  const day = dayOfTheWeek(new Date('3/11/2020'));
+  expect(day).toBe('Wednesday');
 });

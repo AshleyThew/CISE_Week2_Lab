@@ -2,9 +2,9 @@
   "name": "week2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest & eslint ./",
     "build": "webpack ./src/app.js --output-filename bundle.js -o ./public"
   },
   "author": "",
@@ -15,5 +15,10 @@
     "jest": "^26.6.3",
     "webpack": "^5.26.3",
     "webpack-cli": "^4.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
   }
 }
