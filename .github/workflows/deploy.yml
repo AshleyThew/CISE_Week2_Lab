@@ -20,4 +20,6 @@ jobs:
       run: |
         git init
         heroku git:remote --app cise-week2
+        git add .
+        git commit -m "Build"
         git push heroku master      
