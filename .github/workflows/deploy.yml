@@ -13,13 +13,11 @@ jobs:
     - name: Login to Heroku Container registry
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:login
+      run: 
     - name: Build and push
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: |
-        git init
+        heroku container:login
         heroku git:remote --app cise-week2
-        git add .
-        git commit -m "Build"
-        git push heroku master      
+        git push heroku HEAD:master 
