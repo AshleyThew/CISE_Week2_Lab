@@ -17,8 +17,8 @@ jobs:
     - name: Build and push
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: git remote add heroku https://heroku:${{ secrets.HEROKU_API_KEY }}@git.heroku.com/cise-week2.git
+      run: heroku git:remote --app cise-week2
     - name: Release
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: git push --force heroku `git subtree split --prefix server HEAD`:master
+      run: git push heroku master

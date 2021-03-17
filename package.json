@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "build": "webpack ./src/app.js -o ./public/bundle.js"
+    "build": "webpack ./src/app.js --output-filename bundle.js -o ./public"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/preset-env": "^7.13.10",
+    "express": "^4.17.1",
     "jest": "^26.6.3",
     "webpack": "^5.26.3",
     "webpack-cli": "^4.5.0"
