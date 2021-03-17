@@ -17,7 +17,7 @@ jobs:
     - name: Build and push
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: git init
-      run: heroku git:remote --app cise-week2
-      run: git push heroku master
-      
+      run: |
+        git init
+        heroku git:remote --app cise-week2
+        git push heroku master      
